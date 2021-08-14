@@ -8,7 +8,6 @@ export const FeatureSection = styled.section`
 margin: 8rem 0 2rem;
 position: relative;
 width: 100%;
-height: 90vh;
 `;
 export const FeatureBg = styled.div`
   position: absolute;
@@ -45,6 +44,7 @@ object-fit: cover;
 `
 export const FeatureContainer = styled.div`
 padding: 5rem 0;
+height: 100%;
 ;
 `;
 export const TopLine = styled.h1`
@@ -69,10 +69,13 @@ grid-template-columns: repeat(2, 1fr);
 align-items: center;
 justify-content: center;
 gap: 40px;
+height: 100%;
+
+@media screen and (max-width:768px){
+  grid-template-columns: 1fr;
+}
 `;
 export const FeatureCard = styled.div`
-width: 100%;
-height: 90%;
 background: #fff;
 border: none;
 border-radius: 5px;

@@ -1,11 +1,17 @@
 import styled from "styled-components";
 import { Link } from "react-router-dom";
 
+export const HeroSection = styled.section`
+height: inherit;
+margin-top: -80px;
+width: 100%;
+`
+
 export const HeroContainer = styled.div`
   width: 100%;
-  height: 100vh;
-  margin-top: -80px;
+  height: 100%;
   position: relative;
+  padding: 5rem 0;
   z-index: 1;
 
   &::after {
@@ -49,19 +55,37 @@ export const HeroWrapper = styled.div`
   height: 100%;
   padding: 0 20px;
   padding-top: 50px;
-  margin: 0 auto;
+  margin: 0px auto;
   display: flex;
   align-items: center;
   justify-content: space-between;
+
+  @media screen and (max-width:768px){
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
 `;
 
 export const HeroLeftSide = styled.div`
   flex-basis: 60%;
   margin-top: 30px;
+  padding: 1.5 1.2rem;
+
+  @media screen and (max-width:768px){
+    flex-basis: 50%;
+  }
 `;
 
 export const HeroContent = styled.div`
   padding: 2rem 0;
+
+  @media screen and (max-width: 768px) {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
 `;
 
 export const TopLine = styled.p`
@@ -89,6 +113,10 @@ export const SubHeading = styled.p`
   font-size: 1rem;
   line-height: 1.8;
   font-weight: 500;
+  
+  @media screen and (max-width:768px){
+    text-align: center;
+  }
 `;
 
 export const HeroBtn = styled.div`
@@ -96,19 +124,24 @@ export const HeroBtn = styled.div`
 `;
 
 export const HeroRightSide = styled.div`
-  padding: 1.5rem 0;
+  padding: 1.5rem 1.2rem;
   flex-basis: 30%;
   border: 2px solid #f7f7f7;
   border-radius: 5px;
+
 `;
 
 export const FormContainer = styled.div`
-  max-width: 450px;
+  max-width: 400px;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
   padding: 2rem 0;
+
+  @media screen and (max-width:768px){
+    max-width: 400px;
+  }
 `;
 
 export const FormHeading = styled.h3`

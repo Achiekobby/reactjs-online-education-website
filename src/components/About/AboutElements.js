@@ -28,6 +28,12 @@ export const AboutWrapper = styled.div`
   display: flex;
   align-items: center;
   justify-content: space-between;
+
+  @media screen and (max-width:768px){
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
 `;
 export const LeftSide = styled.div`
   flex-basis: 35%;
@@ -60,7 +66,10 @@ export const ImageOverlay = styled.div`
     hsla(249, 86%, 53%, 0.75) 0%,
     hsla(306, 100%, 46%, 0.7) 100%,
     hsla(319, 72%, 75%, 0.6) 100%
-  ); ;
+  );
+  @media screen and (max-width:768px){
+    right: 0px;
+  }
 `;
 
 export const OverlayContent = styled.p`

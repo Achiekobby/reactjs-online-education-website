@@ -26,14 +26,21 @@ margin: 0 auto;
 display: flex;
 align-items: center;
 justify-content: space-between;
-padding: 1.5rem 0;
+padding: 1.5rem 1.2rem;
 border-bottom: 1px solid lightgray;
+
+@media screen and (max-width:768px){
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
 `
 export const EventImage = styled.div`
 width: 200px;
 height: 200px;
 border: none;
 border-radius: 10px;
+/* margin-right: 20px; */
 
 `
 export const ImageItem = styled.img`
@@ -44,14 +51,20 @@ object-fit: cover;
 -o-object-fit: cover;
 `
 export const EventDate = styled.p`
-text-align: center;
-font-size: 1.03rem;
-color: #666;
-`
+  text-align: center;
+  font-size: 1.03rem;
+  color: #666;
+  /* margin-right: 30px; */
+`;
 export const EventDetail = styled.div`
-padding: 1rem 0;
-text-align: left;
-`
+  padding: 1rem 0;
+  text-align: left;
+  margin-right: 20px;
+
+  @media screen and (max-width: 768px) {
+    text-align: center;
+  }
+`;
 export const EventTitle = styled.h3`
 font-size: 1.15rem;
 font-weight: 600;

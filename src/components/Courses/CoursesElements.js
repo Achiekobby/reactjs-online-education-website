@@ -11,12 +11,18 @@ export const CourseContainer = styled.div`
 `;
 export const CourseWrapper = styled.div`
 max-width: 1300px;
-padding: 0 10px;
+padding: 0 20px;
 margin: 0 auto;
 display: flex;
 align-items: center;
 justify-content: space-between;
 text-align: center;
+
+@media screen and (max-width:768px){
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
 `
 export const CourseCard = styled.div`
   z-index: 10;
@@ -26,6 +32,11 @@ export const CourseCard = styled.div`
   background: #fff;
   border-radius: 5px;
   box-shadow: 4px 8px 13px -7px rgba(237, 144, 207, 0.75);
+  margin-right: 20px;
+
+  @media screen and (max-width:768px){
+    margin-bottom: 30px;
+  }
 `;
 export const CourseIcon = styled.i`
 ${color}

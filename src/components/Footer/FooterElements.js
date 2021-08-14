@@ -15,10 +15,13 @@ margin: 0 auto;
 display: grid;
 grid-template-columns: repeat(6, .5fr);
 gap: 30px;
-align-items: center;
-justify-content: flex-start;
+place-content: center;
 border-bottom: 1px solid #0a0a0a;
-padding: 3.5rem 0;
+padding: 3.5rem 1.2rem;
+
+@media screen and (max-width:768px){
+  grid-template-columns: 1fr;
+}
 `
 export const Company = styled.div`
 grid-area: 1/1/2/3;
@@ -88,12 +91,20 @@ display: flex;
 align-items: center;
 justify-content: center;
 padding: 1.35rem 0;
+
+@media screen and (max-width:768px){
+  flex-direction: column;
+}
 `
 export const InterestText = styled.h3`
   color: #777;
   margin-right: 20px;
   font-size: 0.95rem;
   font-weight: 500;
+
+  @media screen and (max-width:768px){
+    margin-bottom: 20px;
+  }
 
   &:hover {
     color: #4635ff;

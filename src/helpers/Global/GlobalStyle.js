@@ -9,11 +9,12 @@ const GlobalStyle = createGlobalStyle`
 }
 
 html{
-    overflow-x: hidden;
+    
 }
 body{
     background: #F4F4F4;
+    overflow-x: hidden;
 }
-`
+`;
 
 export default GlobalStyle

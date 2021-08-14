@@ -1,9 +1,8 @@
 import React from "react";
 import { Button } from "../../helpers/Buttons/Buttons";
 import ImageItemOne from "../../assets/images/student-1.jpg";
-import ImageItemTwo from "../../assets/images/student-2.jpg";
-import ImageItemThree from "../../assets/images/student-3.jpg";
-import ImageItemFour from "../../assets/images/student-4.jpg";
+import ImageItemTwo from "../../assets/images/lab.jpg";
+import ImageItemThree from "../../assets/images/galleryThree.jpg";
 
 import {
     GallerySection,
@@ -12,9 +11,8 @@ import {
     HeadLine,
     GalleryImages,
     Img,
-    ImgDiv,
     ImageItem,
-    ImageItemDiv,
+    ImageText,
 } from "./GalleryElements"
 
 const Gallery = () => {
@@ -23,22 +21,22 @@ const Gallery = () => {
       <GallerySection>
         <GalleryContainer>
           <HeadLine>
-            University <span>Gallery</span>
+            University Facilities <span>Gallery</span>
           </HeadLine>
           <GalleryWrapper>
             <GalleryImages>
-              <ImageItem width="480px" gridArea="1 / 1 / 3 / 2">
+              <ImageItem>
+                <h1>Library</h1>
                 <Img src={ImageItemOne} alt="" />
               </ImageItem>
-              <ImageItem width="380px" gridArea="1 / 2 / 3 / 3">
+              <ImageItem>
+                <h1>Laboratory</h1>
                 <Img src={ImageItemTwo} alt="" />
               </ImageItem>
-              <ImageItemDiv gridArea="1 / 3 / 2 / 4">
-                <ImgDiv src={ImageItemThree} alt="" />
-              </ImageItemDiv>
-              <ImageItemDiv gridArea="2 / 3 / 3 / 4">
-                <ImgDiv src={ImageItemFour} alt="" />
-              </ImageItemDiv>
+              <ImageItem>
+                <h1>Gym</h1>
+                <Img src={ImageItemThree} alt="" />
+              </ImageItem>
             </GalleryImages>
             <Button primary wide>
               Explore More

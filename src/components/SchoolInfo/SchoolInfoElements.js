@@ -22,6 +22,11 @@ span{
     color: #4635ff;
     font-weight: 600;
 }
+
+@media screen and (max-width:768px){
+  font-size: 1.35rem;
+  text-align: left;
+}
 `
 export const InfoWrapper = styled.div`
 max-width: 1300px;
@@ -29,16 +34,28 @@ padding: 0 20px;
 margin: 0 auto;
 display: flex;
 align-items: center;
-justify-content: space-between;
+justify-content: center;
+
+@media screen and (max-width:768px){
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
 `
 export const InfoCard = styled.div`
   position: relative;
-  width: 30%;
+  width: 350px;
   background: #fff;
   border: none;
   border-radius: 10px;
   height: 500px;
   box-shadow: 3px 5px 20px 0px rgba(83, 87, 249, 0.43);
+  margin-right: 30px;
+
+  @media screen and (max-width:768px){
+    margin-bottom: 40px;
+    margin-right: 0;
+  }
 `;
 export const CardImg = styled.div`
 width: 100%;

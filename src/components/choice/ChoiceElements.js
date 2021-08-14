@@ -4,7 +4,6 @@ import {color} from "styled-system"
 
 export const ChoiceSection = styled.section`
   margin: 5rem 0 0rem;
-  height: 95vh;
   background: #fff;
 `;
 export const ChoiceContainer = styled.div`
@@ -18,6 +17,11 @@ export const ChoiceWrapper = styled.div`
   display: flex;
   align-items: center;
   justify-content: space-between;
+
+  @media screen and (max-width:768px){
+    flex-direction: column;
+    align-items: center;
+  }
 `;
 export const LeftSide = styled.div`
   flex-basis: 55%;

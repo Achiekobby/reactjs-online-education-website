@@ -41,7 +41,7 @@ const Home = () => {
         <Gallery/>
         <Contact/>
         <SchoolInfo/>
-        <Footer/>``
+        <Footer/>
       </>
     );
 }

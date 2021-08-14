@@ -28,7 +28,13 @@ export const ProgrammeWrapper = styled.div`
   margin: 0 auto;
   display: flex;
   align-items: center;
-  justify-content: space-between;
+  justify-content: center;
+
+  @media screen and (max-width:768px){
+    flex-direction: column;
+    align-items: center;
+    justify-content:center;
+  }
 `;
 export const ProgrammeCard = styled.div`
   width: 360px;
@@ -36,6 +42,12 @@ export const ProgrammeCard = styled.div`
   border-radius: 10px;
   background: #fff;
   box-shadow: 3px 5px 20px 0px rgba(83, 87, 249, 0.43);
+  margin-right: 30px;
+
+  @media screen and (max-width:768px){
+    margin-bottom: 40px;
+    margin-right: 0;
+  }
 `;
 
 export const CardTitle = styled.h3`
