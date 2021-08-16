@@ -26,7 +26,7 @@ import ImageBg from "../../assets/images/feature-bg.jpg";
 const Feature = () => {
   return (
     <>
-      <FeatureSection>
+      <FeatureSection id="features">
         <FeatureBg>
           <ImageBackground src={ImageBg} alt="" />
         </FeatureBg>

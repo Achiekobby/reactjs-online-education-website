@@ -17,7 +17,7 @@ import {
 const Events = ({ events }) => {
   return (
     <>
-      <EventSection>
+      <EventSection id="events">
         <EventContainer>
           <Heading>
             All Upcoming <span>Events</span>

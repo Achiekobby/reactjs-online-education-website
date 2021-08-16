@@ -29,7 +29,7 @@ import { Button } from "../../helpers/Buttons/Buttons";
 const About = () => {
   return (
     <>
-      <AboutSection>
+      <AboutSection id="about">
         <AboutContainer>
           <Heading>
             About Our <span>Programmes</span>

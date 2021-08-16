@@ -29,7 +29,7 @@ import {
 const Programme = ({ ProgrammeData }) => {
   return (
     <>
-      <Programmes>
+      <Programmes id="programmes">
         <ProgrammeContainer>
           <Heading>
             Our Programme <span>Courses</span>

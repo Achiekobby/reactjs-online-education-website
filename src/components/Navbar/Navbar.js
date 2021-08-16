@@ -1,4 +1,5 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
+import { animateScroll as scroll } from "react-scroll";
 import {
   NavbarContainer,
   NavbarWrapper,
@@ -8,28 +9,56 @@ import {
   NavLink,
   LogoIcon,
   MobileMenu,
-  NavBtn
+  NavBtn,
 } from "./NavbarElements";
-import { LinkData } from "../../data/NavData"
-import { Button } from "../../helpers/Buttons/Buttons";
+import { LinkData } from "../../data/NavData";
+import { NavButton } from "../../helpers/Buttons/Buttons";
 
-const Navbar = ({toggleSideMenu}) => {
+const Navbar = ({ toggleSideMenu }) => {
+  const [scrollNav, setScrollNav] = useState(false);
+
+  const handleScrollNav = () => {
+    if (window.scrollY >= 80) {
+      setScrollNav(true);
+    } else {
+      setScrollNav(false);
+    }
+  };
+
+  useEffect(() => {
+    window.addEventListener("scroll", handleScrollNav);
+  }, []);
+
+  const toggleHome = () => {
+    scroll.scrollToTop();
+  };
+
   return (
     <>
-      <NavbarContainer>
+      <NavbarContainer scrollNav={scrollNav}>
         <NavbarWrapper>
-          <NavLogo>
+          <NavLogo to="/" scrollNav={scrollNav} onClick={toggleHome}>
             <span>
-              <LogoIcon />
+              <LogoIcon scrollNav={scrollNav} />
             </span>
             <h1>SIKSHA</h1>
           </NavLogo>
-          <MobileMenu onClick = {toggleSideMenu}/>
+          <MobileMenu onClick={toggleSideMenu} scrollNav={scrollNav} />
           <Nav>
             {LinkData.map((item, index) => {
               return (
                 <NavMenu>
-                  <NavLink key={index} to={item.path}>
+                  <NavLink
+                    key={index}
+                    to={item.path}
+                    smooth={true}
+                    duration={500}
+                    spy={true}
+                    exact="true"
+                    offset={-80}
+                    activeClass="active"
+                    scrollNav={scrollNav}
+                  >
                     {item.title}
                   </NavLink>
                 </NavMenu>
@@ -37,7 +66,9 @@ const Navbar = ({toggleSideMenu}) => {
             })}
           </Nav>
           <NavBtn>
-            <Button outline>Get Admission</Button>
+            <NavButton scrollNav={scrollNav} outline="true">
+              Get Admission
+            </NavButton>
           </NavBtn>
         </NavbarWrapper>
       </NavbarContainer>

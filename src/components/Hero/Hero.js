@@ -23,7 +23,7 @@ import {
 const Hero = () => {
   return (
     <>
-      <HeroSection>
+      <HeroSection id="home">
         <HeroContainer>
           <HeroBg>
             <ImageBg src={HeroImg} alt="Students Studying"></ImageBg>

@@ -29,7 +29,7 @@ export const AboutWrapper = styled.div`
   align-items: center;
   justify-content: space-between;
 
-  @media screen and (max-width:768px){
+  @media screen and (max-width: 768px) {
     flex-direction: column;
     align-items: center;
     justify-content: center;
@@ -67,7 +67,7 @@ export const ImageOverlay = styled.div`
     hsla(306, 100%, 46%, 0.7) 100%,
     hsla(319, 72%, 75%, 0.6) 100%
   );
-  @media screen and (max-width:768px){
+  @media screen and (max-width: 768px) {
     right: 0px;
   }
 `;
@@ -85,13 +85,13 @@ export const RightSide = styled.div`
   flex-basis: 45%;
 `;
 export const RightSideContent = styled.div`
-width: 100%;
+  width: 100%;
 `;
 export const RightSideTitle = styled.h3`
   font-size: 2.75rem;
   font-weight: 500;
   color: #444;
- padding: 1.5rem 0;
+  padding: 1.5rem 0;
 
   span {
     color: #4635ff;
@@ -99,24 +99,23 @@ export const RightSideTitle = styled.h3`
   }
 `;
 export const RightSideSubtitle = styled.p`
-font-size: 1.03rem;
-font-weight: 500;
-color: #777;
-padding-bottom: 1.8rem;
-line-height: 1.6;
+  font-size: 1.03rem;
+  font-weight: 500;
+  color: #777;
+  padding-bottom: 1.8rem;
+  line-height: 1.6;
 `;
 export const AboutFeatured = styled.div`
-padding: 1rem 0;
-display: flex;
-align-items: center;
-justify-content: space-between;
+  padding: 1rem 0;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
 `;
 export const Featured = styled.div`
-display: flex;
-align-items: center;
-justify-content: center;
-padding: 1rem 0;
-
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 1rem 0;
 `;
 export const FeaturedOneIcon = styled(IoRocketOutline)`
   font-size: 2.5rem;
@@ -126,21 +125,19 @@ export const FeaturedTwoIcon = styled(FcBusinesswoman)`
   font-size: 2.5rem;
 `;
 export const FeaturedContent = styled.div`
-margin-left: 10px;
+  margin-left: 10px;
 `;
 export const Title = styled.h3`
-    font-size: 1.2rem;
-    font-weight: 600;
-    margin-bottom: 5px;
-
+  font-size: 1.2rem;
+  font-weight: 600;
+  margin-bottom: 5px;
 `;
 export const Subtitle = styled.p`
-color: #777;
-font-size: 1.02rem;
-font-weight: 500;
-
+  color: #777;
+  font-size: 1.02rem;
+  font-weight: 500;
 `;
 
 export const AboutBtn = styled.div`
-padding: 2.5rem 0;
-`
+  padding: 2.5rem 0;
+`;

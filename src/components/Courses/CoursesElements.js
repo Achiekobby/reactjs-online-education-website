@@ -25,7 +25,7 @@ text-align: center;
 }
 `
 export const CourseCard = styled.div`
-  z-index: 10;
+  z-index: 9;
   width: 170px;
   padding: 1.6rem 0.6rem;
   border: none;

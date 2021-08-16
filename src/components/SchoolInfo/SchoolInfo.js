@@ -18,7 +18,7 @@ import {
 const SchoolInfo = () => {
   return (
     <>
-      <InfoSection>
+      <InfoSection id="news">
         <InfoContainer>
           <HeadLine>
             Read Our Popular Tips and Tricks from the

@@ -1,6 +1,6 @@
 import styled, { css } from "styled-components/macro";
 import { GiCheckMark } from "react-icons/gi";
-import {color} from "styled-system"
+import { color } from "styled-system";
 
 export const ChoiceSection = styled.section`
   margin: 5rem 0 0rem;
@@ -18,7 +18,7 @@ export const ChoiceWrapper = styled.div`
   align-items: center;
   justify-content: space-between;
 
-  @media screen and (max-width:768px){
+  @media screen and (max-width: 768px) {
     flex-direction: column;
     align-items: center;
   }
@@ -64,43 +64,43 @@ export const RightSideFeatured = styled.div`
   padding: 1.2rem 0;
 `;
 export const ChoiceFeatures = styled.div`
-display: flex;
-align-items: center;
-justify-content: flex-start;
-margin-bottom: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  margin-bottom: 10px;
 `;
 
 export const IconType = styled.div`
-display: flex;
-align-items: center;
-justify-content: center;
-margin-right: 10px;
-`
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-right: 10px;
+`;
 
 export const IconTypeOne = styled(GiCheckMark)`
   background: linear-gradient(45deg, #842bf1, #d2b4fc);
   font-size: 2.1rem;
   padding: 0.2rem 0.4rem;
   color: #fff;
-  border-radius:5px;
+  border-radius: 5px;
 `;
 export const IconTypeTwo = styled(GiCheckMark)`
   background: linear-gradient(45deg, #f4668f, #f386dd);
   font-size: 2.1rem;
   padding: 0.2rem 0.4rem;
   color: #fff;
-  border-radius:5px;
+  border-radius: 5px;
 `;
 export const IconTypeThree = styled(GiCheckMark)`
-  background: linear-gradient(45deg, #389AFD, rgb(105,201,250));
+  background: linear-gradient(45deg, #389afd, rgb(105, 201, 250));
   font-size: 2.1rem;
   padding: 0.2rem 0.4rem;
   color: #fff;
-  border-radius:5px;
+  border-radius: 5px;
 `;
 export const FeaturedText = styled.p`
-padding: .5rem .8rem;
-${color}
-font-size: 1.03rem;
-font-weight: 500;
+  padding: 0.5rem 0.8rem;
+  ${color}
+  font-size: 1.03rem;
+  font-weight: 500;
 `;

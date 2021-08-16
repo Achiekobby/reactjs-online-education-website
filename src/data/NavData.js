@@ -1,26 +1,30 @@
 export const LinkData = [
   {
-    title: "Homes",
-    path: "/homes",
+    title: "Home",
+    path: "home",
+  },
+  {
+    title: "Programmes",
+    path: "programmes",
   },
   {
     title: "About",
-    path: "/about",
+    path: "about",
   },
   {
-    title: "Pages",
-    path: "/pages",
+    title: "Features",
+    path: "features",
   },
   {
-    title: "Courses",
-    path: "courses",
+    title: "Events",
+    path: "events",
   },
   {
     title: "Contact",
-    path: "/contacts",
+    path: "contact",
   },
   {
     title: "News",
-    path: "/news",
+    path: "news",
   },
 ];

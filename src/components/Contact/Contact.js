@@ -13,7 +13,7 @@ import {
 const Contact = () => {
   return (
     <>
-      <ContactSection>
+      <ContactSection id="contact">
         <ContactBg>
           <ImgItem src={ImgSrc} />
         </ContactBg>
