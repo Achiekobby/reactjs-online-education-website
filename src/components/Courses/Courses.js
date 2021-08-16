@@ -30,13 +30,13 @@ const Courses = () => {
               <NumberOfCourses>30 Courses</NumberOfCourses>
             </CourseCard>
 
-            <CourseCard>
-              <CourseIcon color="#F8B3DA">
-                <FaMicrophoneAlt />
-              </CourseIcon>
-              <CourseTitle>Marketing</CourseTitle>
-              <NumberOfCourses>11 Courses</NumberOfCourses>
-            </CourseCard>
+              <CourseCard>
+                <CourseIcon color="#F8B3DA">
+                  <FaMicrophoneAlt />
+                </CourseIcon>
+                <CourseTitle>Marketing</CourseTitle>
+                <NumberOfCourses>11 Courses</NumberOfCourses>
+              </CourseCard>
 
             <CourseCard>
               <CourseIcon color="#7471F6">
