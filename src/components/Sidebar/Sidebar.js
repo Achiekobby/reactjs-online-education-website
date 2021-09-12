@@ -1,6 +1,7 @@
 import React from "react";
 import { LinkData } from "../../data/NavData";
 import { Button } from "../../helpers/Buttons/Buttons";
+
 import {
   SidebarContainer,
   Icon,
@@ -8,11 +9,10 @@ import {
   SidebarWrapper,
   SidebarMenu,
   SidebarLink,
-  SidebarBtn
+  SidebarBtn,
 } from "./SidebarElements";
 
-const Sidebar = ({isOpen, closeSideMenu}) => {
-
+const Sidebar = ({ isOpen, closeSideMenu }) => {
   return (
     <>
       <SidebarContainer isOpen={isOpen}>
@@ -23,7 +23,17 @@ const Sidebar = ({isOpen, closeSideMenu}) => {
           <SidebarMenu>
             {LinkData.map((item, index) => {
               return (
-                <SidebarLink to={item.path} key={index} onClick={closeSideMenu}>
+                <SidebarLink
+                  to={item.path}
+                  key={index}
+                  onClick={closeSideMenu}
+                  offset={-100}
+                  activeClass="active"
+                  duration={1000}
+                  smooth={true}
+                  spy={true}
+                  exact="true"
+                >
                   {item.title}
                 </SidebarLink>
               );

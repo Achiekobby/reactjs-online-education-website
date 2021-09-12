@@ -1,5 +1,5 @@
 import { Link } from "react-router-dom";
-import styled, { css } from "styled-components/macro";
+import styled from "styled-components";
 
 export const Button = styled(Link)`
   background: ${({ outline }) =>

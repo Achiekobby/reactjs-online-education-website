@@ -44,12 +44,34 @@ export const CommentWrapper = styled.div`
   display: flex;
   align-items: center;
   justify-content: space-between;
+  position: relative;
 `;
 export const CommentContent = styled.div`
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  top: 150px;
+  left: 0;
+  opacity: 0;
+  transition: all .5s linear;
+
+  &.activeComment {
+    opacity: 1;
+    transform: translateX(0);
+  }
+
+  &.nextComment {
+    transform: translateX(100%);
+  }
+
+  &.prevComment {
+    transform: translateX(-100%);
+  }
 `;
 export const CommentProfile = styled.div`
   display: flex;
@@ -133,19 +155,32 @@ const Icon = css`
   box-shadow: 3px 5px 20px 0px rgba(83, 87, 249, 0.43);
   transition: all .5s ease;
   cursor: pointer;
+  position: absolute;
   &:hover{
       transform: scale(1.05);
   }
+  z-index: 2;
 `;
 
 export const IconPrev = styled(BiLeftArrowAlt)`
-  ${Icon}
   color: #4635FF;
-  font-size: 0.85rem;
+  font-size: 1.4rem;
 
 `;
 export const IconNext = styled(BiRightArrowAlt)`
+  color: #4635ff;
+  font-size: 1.4rem;
+`;
+
+export const PrevComment = styled.button`
+${Icon}
+border: none;
+top: 50px;
+left: 50px;
+`;
+export const NextComment = styled.button`
   ${Icon}
-  color: #4635FF;
-  font-size: 0.85rem;
+  border: none;
+  top: 50px;
+  right: 50px;
 `;

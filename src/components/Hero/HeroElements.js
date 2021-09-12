@@ -2,10 +2,10 @@ import styled from "styled-components";
 import { Link } from "react-router-dom";
 
 export const HeroSection = styled.section`
-height: inherit;
-margin-top: -80px;
-width: 100%;
-`
+  height: inherit;
+  margin-top: -80px;
+  width: 100%;
+`;
 
 export const HeroContainer = styled.div`
   width: 100%;
@@ -60,7 +60,7 @@ export const HeroWrapper = styled.div`
   align-items: center;
   justify-content: space-between;
 
-  @media screen and (max-width:768px){
+  @media screen and (max-width: 768px) {
     flex-direction: column;
     align-items: center;
     justify-content: center;
@@ -72,7 +72,7 @@ export const HeroLeftSide = styled.div`
   margin-top: 30px;
   padding: 1.5 1.2rem;
 
-  @media screen and (max-width:768px){
+  @media screen and (max-width: 768px) {
     flex-basis: 50%;
   }
 `;
@@ -113,8 +113,8 @@ export const SubHeading = styled.p`
   font-size: 1rem;
   line-height: 1.8;
   font-weight: 500;
-  
-  @media screen and (max-width:768px){
+
+  @media screen and (max-width: 768px) {
     text-align: center;
   }
 `;
@@ -124,24 +124,21 @@ export const HeroBtn = styled.div`
 `;
 
 export const HeroRightSide = styled.div`
+  max-width: 350px;
   padding: 1.5rem 1.2rem;
-  flex-basis: 30%;
   border: 2px solid #f7f7f7;
   border-radius: 5px;
-
 `;
 
 export const FormContainer = styled.div`
-  max-width: 400px;
+  width: 100%;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  padding: 2rem 0;
+  padding: 2rem 0rem;
+  text-align: center;
 
-  @media screen and (max-width:768px){
-    max-width: 400px;
-  }
 `;
 
 export const FormHeading = styled.h3`
@@ -152,7 +149,7 @@ export const FormHeading = styled.h3`
 `;
 
 export const FormInput = styled.form`
-  padding: 1rem 2rem;
+  padding: 1rem 2.5rem;
   width: 400px;
   display: flex;
   flex-direction: column;

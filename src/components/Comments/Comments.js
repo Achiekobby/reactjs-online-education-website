@@ -1,4 +1,5 @@
-import React from "react";
+import React, {useState} from "react";
+import Comment from "./Comment"
 
 import {
   CommentSection,
@@ -6,26 +7,25 @@ import {
   CommentBanner,
   CommentImg,
   CommentWrapper,
-  CommentContent,
-  CommentProfile,
-  ProfileImg,
-  ProfilePic,
-  ProfileName,
-  ProfileDesc,
-  ProfileRatings,
-  CommentContentText,
-  CommentSocial,
-  Behance,
-  Facebook,
-  Twitter,
-  Instagram,
   IconNext,
-  IconPrev
+  IconPrev,
+  PrevComment,
+  NextComment
 } from "./CommentsElements";
 import ImageItem from "../../assets/images/comment-bg.jpg"
-import ImageItemTwo from "../../assets/images/profilepic2.jpg"
 
 const Comments = () => {
+    const [index, setIndex] = useState(0);
+
+    const handleAddIndex = () => {
+      setIndex(index + 1);
+      console.log(index);
+    };
+
+    const handleSubtractIndex = () => {
+      setIndex(index - 1);
+      console.log(index);
+    };
   return (
     <>
       <CommentSection>
@@ -34,29 +34,13 @@ const Comments = () => {
             <CommentImg src={ImageItem} alt="" />
           </CommentBanner>
           <CommentWrapper>
-            <IconPrev/>
-            <CommentContent>
-              <CommentProfile>
-                <ProfileImg>
-                  <ProfilePic src={ImageItemTwo} alt=""/>
-                </ProfileImg>
-                <ProfileName>Alexis Hobbs</ProfileName>
-                <ProfileDesc>Designer and Developer</ProfileDesc>
-                <ProfileRatings>⭐⭐⭐⭐⭐</ProfileRatings>
-              </CommentProfile>
-              <CommentContentText>
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Non
-                repellat accusantium maxime illum consectetur maiores cupiditate
-                sunt porro!
-              </CommentContentText>
-              <CommentSocial>
-                <Facebook />
-                <Twitter />
-                <Instagram />
-                <Behance />
-              </CommentSocial>
-            </CommentContent>
-            <IconNext/>
+            <PrevComment onClick={handleSubtractIndex}>
+              <IconPrev />
+            </PrevComment>
+            <Comment index={index} setIndex={setIndex} />
+            <NextComment onClick={handleAddIndex}>
+              <IconNext/>
+            </NextComment>
           </CommentWrapper>
         </CommentContainer>
       </CommentSection>

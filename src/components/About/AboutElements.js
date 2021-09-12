@@ -4,6 +4,7 @@ import { FcBusinesswoman } from "react-icons/fc";
 
 export const AboutSection = styled.section`
   margin: 5rem 0 2rem;
+  width: 100%;
 `;
 export const AboutContainer = styled.div`
   width: 100%;

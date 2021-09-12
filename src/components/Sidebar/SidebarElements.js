@@ -1,5 +1,6 @@
 import styled from "styled-components";
 import { BiExit } from "react-icons/bi";
+import {Link as LinkS} from "react-scroll"
 
 export const SidebarContainer = styled.aside`
   position: fixed;
@@ -39,13 +40,17 @@ color: #FFF;
 export const SidebarMenu = styled.div`
 display: grid;
 grid-template-columns: 1fr;
-grid-template-rows: repeat(6, 80px);
+grid-template-rows: repeat(7, 80px);
 text-align: center;
 `;
-export const SidebarLink = styled.div`
-font-size: 1.2rem;
-font-weight: 500;
+export const SidebarLink = styled(LinkS)`
+  font-size: 1.2rem;
+  font-weight: 500;
 
+  &.active {
+    color: #33e0fd;
+    font-weight: 600;
+  }
 `;
 export const SidebarBtn = styled.div`
 display: flex;
